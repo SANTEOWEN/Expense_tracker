@@ -1,15 +1,25 @@
+import { Tabs } from 'expo-router'
 import React from 'react'
-import { Text, View } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
 
-const TabLayout = () => {
-  return (
-    <SafeAreaView>
-        <View>
-            <Text>TEST</Text>
-        </View>
-    </SafeAreaView>
-  )
-}
+const TabLayout = () => (
+    <Tabs screenOptions={{ headerShown: false }}>
+        <Tabs.Screen name='index'
+            options={{
+                title: 'Home',
+            }} />
+        <Tabs.Screen name='Transactions'
+            options={{
+                title: 'Transactions'
+            }} />
+        <Tabs.Screen name='Goals'
+            options={{
+                title: 'Goals'
+            }} />
+        <Tabs.Screen name='Analytics'
+            options={{
+                title: 'Analytics'
+            }} />
+    </Tabs>
+)
 
 export default TabLayout
